@@ -1,12 +1,13 @@
 {
   "version": 2,
   "builds": [
-    { "src": "server/main.py", "use": "@vercel/python3.8.16" }
+    { "src": "server/main.py", "use": "@vercel/python" }
   ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/server/main.py" }
   ]
 }
+
 
 
 
