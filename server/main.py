@@ -2,7 +2,7 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-@app.route('/freshgo', methods=['GET'])
+@app.route('/api/freshgo', methods=['GET'])
 def get_users():
     return jsonify([
         {
@@ -149,9 +149,6 @@ def get_users():
         },
     ])
 
-@app.route('/freshgo', methods=['DELETE'])
-def delete_user():
-    return jsonify({'result': 'success'})
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)
